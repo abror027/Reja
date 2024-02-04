@@ -1,0 +1,1 @@
+console.log("Bu yerda keyinchalik TASKlar bo'ladi")
