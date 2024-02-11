@@ -88,6 +88,7 @@ run();
 
 // set interval bilan callbackni ishlashi
 
+/*
 function giveAdvance(a, callback) {
     if (typeof a !== "number") callback("insert a number", null);
     else if (a <= 20) callback(null, list[0]);
@@ -111,6 +112,8 @@ giveAdvance(61, (err, data) => {
 });
 console.log("passed here: 1");
 
+*/
+
 
 
 // task-A
@@ -128,3 +131,17 @@ console.log("passed here: 1");
 
 // console.log(checkLetter("a", "text ham kiritsa ishlayapti")); 
 
+let twoSum = function(nums, target) {
+   
+
+for (let i = 0; i < nums.length; i++) {
+    let b = nums[i]
+    for (let j = i+1; j < nums.length; j++ ) {
+        if (b + nums[j] === target) {
+            return [i,j]
+        }
+    }
+}
+};
+
+twoSum(1,8)

@@ -73,3 +73,33 @@ main .delete-btn {
     margin-top: 30px;
     background-color: rgb(203, 67, 74);
 }
+
+/* Bootstrab codega qo'shimcha */
+
+.list-group {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f6fa;
+}
+
+.btn-success {
+    margin-right: 5px;
+    background-color: #5e6876;
+}
+
+.btn-danger {
+    background-color: rgb(216, 14, 14);
+}
+
+.btn-success, .btn-danger {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
