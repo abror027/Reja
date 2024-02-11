@@ -33,19 +33,18 @@ app.post("/create-item", (req, res) => {
     res.json({ test: "success"});
 });
 
-app.get('/author', (req, res) => {
-    res.render("author", {user: user});
-});
 
-app.get("/", function (req, res) {
-    res.render("");
+app.get("/", (req, res) => {
+    // console.log(req.body);
+    res.render("reja")
+    
 });
 
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-    console.log(`The server is running successfully on port: ${PORT}`);
+    console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
 });
 
 

@@ -6,423 +6,70 @@
     box-sizing: border-box;
 }
 
-:root {
-    --in: 'Inter', sans-serif;
-    --ro: 'Roboto', sans-serif;
-}
-
 body {
-    background-color: #b8bbd1;;
+    font-family: 'Roboto', sans-serif;
+    background-color: #b9bad0;
 }
 
-.main {
-    width: 100%;
-    position: relative;
-    display: flex;
-    font-display: row;
-    margin-top: 2px;
+main {
+    width: 940px;
+    margin: auto;
 }
 
-/* Unversal codes */
-
-.border-radius-all-one {
-    width: 100%;
-    border-bottom: 2px solid #F0F0F6;
-    border-radius: 30px ;
-}
-
-/* left_frame starting */
-
-.main .left_frame {
-    background-color: #fff;
-    margin-right: 30px;
-}
-
-.main .left-frame-main {
-    width: 100%;
-    padding-right: 30px;
-    padding-left: 47px;
-}
-
-.main .left-frame-main .profile-ceo {
-    width: 228px;
-    grid-template-columns: 4, auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 47px;
-}
-
-.main .left-frame-main .profile-ceo .left-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.main .left-frame-main .profile-ceo .left-header .header-pic-name {
-    width: 157px;
-}
-
-.main .left-frame-main .profile-ceo .left-header .header-pic-name p:nth-of-type(1) {
-    font-size: 18px;
-    font-weight: 500;
-    font-family: var(--in);
-    line-height: 22px;
-    color: #2B2B2B;
-    margin-top: 27px;
-}
-
-.main .left-frame-main .profile-ceo .left-header .header-pic-name p:nth-of-type(2) {
-    font-size: 15px;
+main h1 {
+    font-size: 60px;
     font-weight: 400;
-    font-family: var(--in);
-    line-height: 24px;
-    color: #767676;
-    margin-top: 6px;
-}
-
-.main .left-frame-main .profile-ceo .marcos-icon-link {
-    padding-bottom: 54px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main .left-frame-main .profile-ceo .marcos-icon-link a img {
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.22);
-    border-radius: 50%;
-    background-color: #FFB400;
-    padding: 4.5px 4.5px;
-    position: relative;
-    margin-top: 18px;
-}
-
-.main .left-frame-main .profile-ceo .info-user-profile {
-    margin-top: 10px;
-}
-
-.main .left-frame-main .profile-ceo .info-user-profile .border-radius-all-one {
-    margin-top: 25px;
-}
-
-.main .left-frame-main .profile-ceo .info-user-profile .age, .residence, .freelanse, .adress {
-    display: flex;
-    justify-content: space-between;
-}
-
-.main .left-frame-main .profile-ceo .info-user-profile p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: var(--in);
-    color: #2B2B2B;
-    margin-top: 9px;
-}
-
-.main .left-frame-main .profile-ceo .info-user-profile p:nth-child(1) {
-    background-color: #FFB400;
-    padding: 0px 6px 0px 5px;
-}
- 
-.main .left-frame-main .profile-ceo .info-user-profile .freelanse p:nth-child(2) {
-    color: #7EB942;
-}
-
-.main .left-frame-main .profile-ceo .languages h3, .skills h3, .extra-skills h3 {
-    font-size: 18px;
-    font-weight: 500;
-    font-family: var(--in);
-    line-height: 22px;
-    color: #2B2B2B;
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-
-.main .left-frame-main .profile-ceo .languages .name-lang, .skills .name-lang {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.main .left-frame-main .profile-ceo .languages p, .skills p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: var(--in);
-    color: #767676;
-}
-
-.main .left-frame-main .profile-ceo .languages .point-procent, .skills .point-procent {
-    width: 100%;
-    border: 0.5px solid #FFB400;
-    border-radius: 30px ;
-    padding: 1px 2px;
-    margin-top: 5px;
-}
-
-.main .left-frame-main .profile-ceo .languages .first .in-point:nth-child(1), .second .in-point:nth-child(1), .thread .in-point:nth-child(1),.skills .first .in-point:nth-child(1), .the-3 .in-point:nth-child(1), .the-4 .in-point:nth-child(1), .the-5 .in-point:nth-child(1), .the-6 .in-point:nth-child(1) {
-    border: 2px solid #FFB400;
-    border-radius: 30px;
-    height: 2px;
-}
-
-.main .left-frame-main .profile-ceo .languages .first .in-point:nth-child(1) {
-    width: 100%;
-}
-
-.main .left-frame-main .profile-ceo .languages .second .in-point:nth-child(1) {
-    width: 65%;
-}
-
-.main .left-frame-main .profile-ceo .languages .thread .in-point:nth-child(1) {
-    width: 45%;
-}
-
-.main .left-frame-main .profile-ceo .skills .first .in-point:nth-child(1) {
-    width: 90%;
-}
-
-.main .left-frame-main .profile-ceo .skills .second .in-point:nth-child(1) {
-    width: 65%;
-}
-
-.main .left-frame-main .profile-ceo .skills .the-3 .in-point:nth-child(1) {
-    width: 45%;
-}
-
-.main .left-frame-main .profile-ceo .skills .the-4 .in-point:nth-child(1) {
-    width: 0%;
-}
-
-.main .left-frame-main .profile-ceo .skills .the-5 .in-point:nth-child(1) {
-    width: 17%;
-}
-
-.main .left-frame-main .profile-ceo .skills .the-6 .in-point:nth-child(1) {
-    width: 75%;
-}
-
-.main .left-frame-main .profile-ceo .languages .thread, .skills .the-6 {
-    padding-bottom: 25px;
-}
-
-.main .left-frame-main .profile-ceo .extra-skills h3 {
-    margin-bottom: 15px;
-}
-
-.main .left-frame-main .profile-ceo .extra-skills .box a {
-    display: flex;
-    justify-content: flex-start;
-    height: 24px;
-    margin-bottom: 5px;
-}
-
-.main .left-frame-main .profile-ceo .extra-skills img {
-    width: 15px;
-}
-
-.main .left-frame-main .profile-ceo .extra-skills p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: var(--in);
-    color: #767676;
-    padding-left: 15px;
-}
-
-.main .left-frame-main .profile-ceo .extra-skills .border-radius-all-one {
-    margin-top: 20px;
-    margin-bottom: 100px;
-}
-
-/* Starting  middle main frame (mid_frame) */
-
-.mid_frame {
-    width: 100%;
-}
-
-.mid_frame main .header {
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 60px;
-}
-
-.mid_frame main .header .header-title {
-    padding-top: 100px;
-    margin: 0px 60px;
-}
-
-.mid_frame main .header .header-title h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 60px;
-    font-family: var(--in);
-    color: #2B2B2B;
-    width: 500px;
-}
-
-.mid_frame main .header .header-title p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: var(--in);
-    color: #767676;
-    width: 430px;
-    padding-top: 20px;
-}
-
-.mid_frame main .header .header-title .btn {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    font-family: var(--in);
-    color: #2B2B2B;
+    line-height: 30px;
     text-transform: uppercase;
-    background-color: #FFB400;
-    padding: 8px 20px 8px 15px;
-    border: none;
-    border-radius: 2px;
-    margin-top: 22px;
-}
-
-.mid_frame main .header .header-title .btn i {
-    margin-left: 10px;
-}
-
-.mid_frame main .services {
-    width: 100%;
-    margin-top: 140px;
-}
-
-.mid_frame main .services .services-title {
+    margin: 30px 0;
     text-align: center;
+}
+
+main .container {
+   background-color: #ebecf0;
+   border-radius: 5px;
+   padding: 10px;
+}
+
+main .container .header-input {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.mid_frame main .services .services-title h2 {
-    width: 200px;
-    font-style: 32px;
-    font-weight: 700;
-    line-height: 40px;
-    font-family: var(--in);
-    color: #2B2B2B;
-    text-transform: capitalize;
-}
-
-.mid_frame main .services .services-title p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: var(--in);
-    color: #767676;
-    width: 50%;
-    margin-top: 25px;
-}
-
-.mid_frame main .services .services-boxes {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
     justify-content: space-between;
-    grid-gap:  20px 20px;
-    margin-top: 50px;
-}
-
-.mid_frame main .services .services-boxes .box {
-    background-color: #fff;
-    text-align: center;
-    width: 350px;
-    height: 230px;
-}
-
-.mid_frame main .services .services-boxes .box img {
-    margin-top: 30px;
-}
-.mid_frame main .services .services-boxes .box h3 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    font-family: var(--in);
-    color: #2B2B2B;
-    margin-top: 26px;
-    text-transform: capitalize;
-}
-.mid_frame main .services .services-boxes .box p {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    font-family: var(--in);
-    color: #767676;
-    text-transform: capitalize;
-    padding: 22px;
-}
-
-.mid_frame main .services .services-boxes .box:nth-of-type(6) a {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 15px;
-    font-family: var(--ro);
-    color: #FFB400;
-}
-
-.mid_frame main .services .services-boxes .box:nth-of-type(6) a i {
-    margin-left: 5px;
-    font-size: 11px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Starting right_frame nav bar */
-
-.right_frame {
-    width: 120px;
-    margin-left: 30px;
-}
-
-.right_frame .right-nav-bar {
-    background-color: rgba(250, 250, 250, 1);
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.right_frame .right-nav-bar .day-night-mode {
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-bottom: 220px;
+main .container .header-input input {
+    width: 80%;
+    border:  3px solid #a5c5f8;
+    border-radius: 5px;
+    height: 40px;
 }
 
-.right_frame .right-nav-bar .nav-bar ul li a img {
-    margin-bottom: 40px;
-    /* shu yerga yordam kerak link pastga tushib qolyapti brauserdan tekshiring! */
+  input:focus {outline: 1px solid rgba(165, 197, 248, 0.75)}
+ 
+  input[type='text'] { 
+    font-size: 20px; 
+    padding: 0px 5px;
 }
 
-.right_frame .right-nav-bar .nav-bar ul {
-    margin-bottom: 570px;
+main .container .header-input .add-btn,
+main .delete-btn {
+    border-radius: 20px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+}
+
+main .container .header-input .add-btn {
+    width: 20%;
+    margin: 0px 3px 0px 13px;
+    background-color: rgb(44, 112, 227);
+}
+
+main .delete-btn {
+    width: 220px;
+    margin-top: 30px;
+    background-color: rgb(203, 67, 74);
 }
