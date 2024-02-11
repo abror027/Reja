@@ -1,54 +1,24 @@
-
-// EJS framework orqali ananaviy fronted quramiz
-
-console.log("web serverni boshlash");
-const express = require("express");
-const app = express();
 const http = require("http");
-const fs = require("fs");
+const mongodb = require("mongodb");
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if(err) {
-        console.log("ERROR:", err);
-    }else {
-        user =JSON.parse(data);
+let db;
+const connectionString = "mongodb+srv://jimbek03:lPX77fckmkvejZSC77fc2@cluster0.e9ek49o.mongodb.net/Reja";
+
+mongodb.connect(connectionString, {
+    userNewUrlParser: true,
+    userUnifiedTopology: true,
+}, (err, client) => {
+    if (err) console.log("ERROR on connection MongoDB");
+    else {
+        console.log("MongoDB connection succed:")
+        module.exports = client;
+
+        const app = require("./app");
+        const server = http.createServer(app);
+        let PORT = 3000;
+        server.listen(PORT, function () {
+            console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
+        });
     }
 });
-
-// 1 - kirish codelari (expressdan kirib kelayotgan ma'lumotlarga bog'liq kodlar)
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-// 2 - sessionga bog'liq narsalar
-
-// 3 -Views codes (bssr => backend server site randrung(backenda html yasab clenga yuborish))
-app.set("views", "views");
-app.set("view engine", "ejs");
-
-// 4 - Routinglarga mo'ljallangan
-app.post("/create-item", (req, res) => {
-    console.log(req.body);
-    res.json({ test: "success"});
-});
-
-
-app.get("/", (req, res) => {
-    // console.log(req.body);
-    res.render("reja")
-    
-});
-
-
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function() {
-    console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
-});
-
-
-
-
-
 
