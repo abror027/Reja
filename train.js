@@ -1,118 +1,28 @@
 
-console.log("Jack Ma maslahatlari");
-const list = [
-    "Yaxshi talaba boling", // 0-20
-    "Togri boshkiq tanlan va koproq xato qiling", // 20-30
-    "Ozingiz uchun ishlashni boshlang", //30-40
-    "Siz ozingiz yaxshi bajaradigan narsalarni qiling", // 40-50
-    "Yoshlarga invistitsiya qiling chunki yoshlar sizdan ko'ra yaxshiroq bajaradi", //50-60
-    "Endi dam oling, hayotdagi qilgan hulosalaringizni yoshlarga aytib jamiyatga foydalik inson bo'ling by author", // 60
-];
 
-// callback function
+// B-TASK: 
 
- 
-function giveAdvance(a, callback) {
-    if (typeof a !== "number") callback("insert a number", null);
-    else if (a <= 20) callback(null, list[0]);
-    else if (a > 20 && a <= 30) callback(null, list[1]);
-    else if (a > 30 && a <= 40) callback(null, list[2]);
-    else if (a > 40 && a <= 50) callback(null, list[3]);
-    else if (a > 50 && a <= 60) callback(null, list[4]);
-    else {
-        setTimeout(function () {
-            callback(null, list[5]);
-        }, 2000);
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+function chekNumber(countDigits) {
+    let nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let count = 0;
+    let num
+
+    for (let i = 0; i < countDigits.length; i++) {
+        num = countDigits.charAt(i);
+        if (nums.includes(num)) {
+            count++
+        }
     }
+    return count;
 }
+const ans = chekNumber('if67fd680f4ar');
 
-console.log("passed here: 0");
-giveAdvance(61, (err, data) => {
-    if (err) console.log('ERROR:', err);
-    else {
-        console.log('javob:', data);
-    }
-});
-console.log("passed here: 1");
+console.log(ans)
 
 
-
-
-// Asyncrinus functionlar 
-
-/*
-async function giveAdvance(a) {
-    if (typeof a !== "number") throw new Error("insert a number");
-    else if (a <= 20) return list[0];
-    else if (a > 20 && a <= 30) return list[1];
-    else if (a > 30 && a <= 40) return list[2];
-    else if (a > 40 && a <= 50) return list[3];
-    else if (a > 50 && a <= 60) return list[4];
-    else {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(list[5]);
-            }, 5000);
-        });
-
-        // setTimeout(function () {
-        //     return list[5];
-        // }, 5000);
-
-    }
-}
-
-// // then va catch (bilan call qismi qilinishi)
-// console.log("passed here: 0");
-// giveAdvance(25).then(data => {
-//     console.log('javob:', data);
-// }).catch(err => {
-//     console.log('ERROR', err)
-// });
-// console.log('passed here 1');
-
-
-// asyn/await (bilan call qismi qilinishi)
-async function run() {
-    let javob = await giveAdvance(20);
-    console.log(javob);
-    javob = await giveAdvance(33);
-    console.log(javob);
-    javob = await giveAdvance(40);
-    console.log(javob);
-}
-
-run();
-*/
-
-
-// set interval bilan callbackni ishlashi
-
-/*
-function giveAdvance(a, callback) {
-    if (typeof a !== "number") callback("insert a number", null);
-    else if (a <= 20) callback(null, list[0]);
-    else if (a > 20 && a <= 30) callback(null, list[1]);
-    else if (a > 30 && a <= 40) callback(null, list[2]);
-    else if (a > 40 && a <= 50) callback(null, list[3]);
-    else if (a > 50 && a <= 60) callback(null, list[4]);
-    else {
-        setInterval(function () {
-            callback(null, list[5]);
-        }, 2000); // setIntervalda qiymat qaytsa davomiy consol log qilaveradi
-    }
-}
-
-console.log("passed here: 0");
-giveAdvance(61, (err, data) => {
-    if (err) console.log('ERROR:', err);
-    else {
-        console.log('javob:', data);
-    }
-});
-console.log("passed here: 1");
-
-*/
 
 
 
@@ -131,17 +41,3 @@ console.log("passed here: 1");
 
 // console.log(checkLetter("a", "text ham kiritsa ishlayapti")); 
 
-let twoSum = function(nums, target) {
-   
-
-for (let i = 0; i < nums.length; i++) {
-    let b = nums[i]
-    for (let j = i+1; j < nums.length; j++ ) {
-        if (b + nums[j] === target) {
-            return [i,j]
-        }
-    }
-}
-};
-
-twoSum(1,8)
