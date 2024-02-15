@@ -1,3 +1,4 @@
+// const { response } = require("../app");
 
 
 console.log("Frontend JS ishga tushdi");
@@ -33,4 +34,25 @@ document
         console.log("Iltimos qaytadan harakat qiling!");
     });
 
+});
+
+
+document.addEventListener("click", function (ele) {
+    // delete operation
+    if(ele.target.classList.contains("delete-me")) {
+        if(confirm("Aniq o'chirmoqchimisiz?")) {
+            axios.post("/delete-item", { id: ele.target.getAttribute("data-id") })
+            .then((respose) => {
+                console.log(respose.data);
+                ele.target.parentElement.parentElement.remove();
+            })
+            .catch((err) => {
+                console.log("Iltimos qaytadan harakat qiling!");
+            });
+        }
+    }
+    // edit operation
+    if(e.target.classList.contains("edit-me")) {
+        alert("siz edit tugmasini bosdingiz");
+    }
 });
