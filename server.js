@@ -1,7 +1,6 @@
 const http = require("http");
 const mongodb = require("mongodb");
 
-let db;
 const connectionString = "mongodb+srv://jimbek03:lPX77fckmkvejZSC77fc2@cluster0.e9ek49o.mongodb.net/Reja";
 
 mongodb.connect(connectionString, {
@@ -15,7 +14,7 @@ mongodb.connect(connectionString, {
 
         const app = require("./app");
         const server = http.createServer(app);
-        let PORT = 3000;
+        let PORT = 3001;
         server.listen(PORT, function () {
             console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
         });

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <title>Reja</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <main>
         <h1>reja va maqsadlar</h1>
@@ -27,8 +29,8 @@
                         <%=item.reja%>
                     </span>
                     <div class="btn-group-own">
-                        <button data-id="<%=item._id%>" class="btn-success">O'zgartirish</button>
-                        <button data-id="<%=item._id%>" class="btn-danger">O'chirish</button>
+                        <button data-id="<%=item._id%>" class="edit-me btn-success">O'zgartirish</button>
+                        <button data-id="<%=item._id%>" class="delete-me btn-danger">O'chirish</button>
                     </div>
                 </li>
                 <% }) %>
@@ -36,7 +38,9 @@
         <div id="clean-all" class="delete-btn">Hamma Rejalarni O'chirish</div>
     </main>
 
-
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
 </body>
 
 </html>
+
