@@ -1,59 +1,88 @@
 
 
-class Shop {
-    constructor(non, lagmon, cola) {
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
-    }
+/*D-TASK: 
 
-    qoldiq() {
-        let time = new Date().toLocaleString();
-        const currentTime = new Date();
-        console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
-    }
-    
-    sotish(mahsulot, miqdor) {
-        
-        if (mahsulot === 'non' && this.non >= miqdor) {
-            this.non -= miqdor;
-            console.log(`${miqdor}ta non sotildi.`);
-        } else if (mahsulot === 'lagmon' && this.lagmon >= miqdor) {
-            this.lagmon -= miqdor;
-            console.log(`${miqdor}ta lagmon sotildi.`);
-        } else if (mahsulot === 'cola' && this.cola >= miqdor) {
-            this.cola -= miqdor;
-            console.log(`${miqdor}ta cola sotildi.`);
-        } else {
-            console.log(`Mavjud emas yoki yetarli miqdorda yo'q.`);
-        }
-    }
-    
-    qabul(mahsulot, miqdor) {
-       
-        if (mahsulot === 'non') {
-            this.non += miqdor;
-            console.log(`${miqdor}ta non qabul qilindi.`);
-        } else if (mahsulot === 'lagmon') {
-            this.lagmon += miqdor;
-            console.log(`${miqdor}ta lagmon qabul qilindi.`);
-        } else if (mahsulot === 'cola') {
-            this.cola += miqdor;
-            console.log(`${miqdor}ta cola qabul qilindi.`);
-        } else {
-            console.log(`Noto'g'ri mahsulot nomi.`);
-        }
-    }
+Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+function solution(num, list) {
+    let a = num.split('').sort().join("")
+     let d =list.split('').sort().join("")
+    return a == d 
 }
+console.log(solution("salom", "samol"));
 
 
 
-const shop = new Shop(4, 5, 2);
-shop.qoldiq(); 
 
-shop.sotish('non', 3);
-shop.qabul('cola', 4);
-shop.qoldiq();
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//         this.non = non;
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+//     }
+
+//     qoldiq() {
+//         let time = new Date().toLocaleString();
+//         const currentTime = new Date();
+//         console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
+//     }
+    
+//     sotish(mahsulot, miqdor) {
+        
+//         if (mahsulot === 'non' && this.non >= miqdor) {
+//             this.non -= miqdor;
+//             console.log(`${miqdor}ta non sotildi.`);
+//         } else if (mahsulot === 'lagmon' && this.lagmon >= miqdor) {
+//             this.lagmon -= miqdor;
+//             console.log(`${miqdor}ta lagmon sotildi.`);
+//         } else if (mahsulot === 'cola' && this.cola >= miqdor) {
+//             this.cola -= miqdor;
+//             console.log(`${miqdor}ta cola sotildi.`);
+//         } else {
+//             console.log(`Mavjud emas yoki yetarli miqdorda yo'q.`);
+//         }
+//     }
+    
+//     qabul(mahsulot, miqdor) {
+       
+//         if (mahsulot === 'non') {
+//             this.non += miqdor;
+//             console.log(`${miqdor}ta non qabul qilindi.`);
+//         } else if (mahsulot === 'lagmon') {
+//             this.lagmon += miqdor;
+//             console.log(`${miqdor}ta lagmon qabul qilindi.`);
+//         } else if (mahsulot === 'cola') {
+//             this.cola += miqdor;
+//             console.log(`${miqdor}ta cola qabul qilindi.`);
+//         } else {
+//             console.log(`Noto'g'ri mahsulot nomi.`);
+//         }
+//     }
+// }
+
+
+
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq(); 
+
+// shop.sotish('non', 3);
+// shop.qabul('cola', 4);
+// shop.qoldiq();
 
 
 
