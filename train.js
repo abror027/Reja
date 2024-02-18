@@ -6,12 +6,12 @@ Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
-function solution(num, list) {
-    let a = num.split('').sort().join("")
-     let d =list.split('').sort().join("")
-    return a == d 
-}
-console.log(solution("salom", "samol"));
+// function solution(num, list) {
+//     let a = num.split('').sort().join("")
+//      let d =list.split('').sort().join("")
+//     return a == d 
+// }
+// console.log(solution("salom", "samol"));
 
 
 

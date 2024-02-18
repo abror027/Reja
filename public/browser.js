@@ -24,7 +24,7 @@ let createField = document.getElementById("create-field");
 document
     .getElementById("create-form")
     .addEventListener("submit", function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
         axios
             .post("/create-item", { reja: createField.value })
             .then((response) => {
@@ -34,7 +34,7 @@ document
                 createField.focus();
             })
             .catch((err) => {
-                console.log("Iltimos qaytadan harakat qiling!", err);
+                console.log("Iltimos qaytadan harakat qiling!");
             });
 
     });
@@ -65,7 +65,7 @@ document.addEventListener("click", function (e) {
                 console.log(response.data);
                 e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
             }).catch((err) => {
-                console.log("Iltimos qaytadan harakat qiling!", err);
+                console.log("Iltimos qaytadan harakat qiling!");
             });
         }
     }
