@@ -1,4 +1,49 @@
 
+/*E-TASK: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+
+*/
+
+// 1-usul
+function Revse(gap) {
+    let d = gap.split('');
+    d.reverse()
+    return d.join("");
+}
+
+console.log(Revse("gap"));
+
+
+// 2-usul
+function getReverse(gap) {
+    let result = "";
+    for(let i = gap.length-1; i >= 0; i--) {
+        result += gap.charAt(i)
+    }
+    return result
+}
+
+console.log(getReverse("maxdasl"));
+
+// 3-usul
+function solution(num_list) {
+    let a = num_list.split('');
+    let result = "";
+    for(let i = a.length-1; i >= 0; i--) {
+        result += a[i];
+    }
+    return result
+}
+console.log(solution("123"));
+
+
+
+
+
+
+
 
 /*D-TASK: 
 
@@ -12,20 +57,6 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 //     return a == d 
 // }
 // console.log(solution("salom", "samol"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -122,23 +153,6 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 // shop2.qabul();
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
