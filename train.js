@@ -1,4 +1,100 @@
 
+/*F-TASK: 
+
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+MASALAN: getReverse("hello") return true return qiladi
+
+*/
+
+function findDoublers(sente) { 
+    // sente = sente.toLowerCase(); typeni solishtirish kerak bo'lmasa
+    for(let i = 0; i < sente.length; i++) {
+        let a = sente.charAt(i);
+        for(let j = 0; j < sente.length; j++) {
+            if(i !== j) { 
+                console.log(i,j)
+                //continue
+                let b = sente.charAt(j);
+                if(a == b) {
+                   return true
+                }  
+            }
+        }
+    }
+    return false
+ }
+
+ let result = findDoublers("bluebox");
+console.log(result);
+
+
+
+// MIT TASK SHU YERGACHA 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*E-TASK: 
 
 Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
@@ -6,43 +102,37 @@ MASALAN: getReverse("hello") return qilsin "olleh"
 
 */
 
-// 1-usul
-function Revse(gap) {
-    let d = gap.split('');
-    d.reverse()
-    return d.join("");
-}
+// // 1-usul
+// function Revse(gap) {
+//     let d = gap.split('');
+//     d.reverse()
+//     return d.join("");
+// }
 
-console.log(Revse("gap"));
-
-
-// 2-usul
-function getReverse(gap) {
-    let result = "";
-    for(let i = gap.length-1; i >= 0; i--) {
-        result += gap.charAt(i)
-    }
-    return result
-}
-
-console.log(getReverse("maxdasl"));
-
-// 3-usul
-function solution(num_list) {
-    let a = num_list.split('');
-    let result = "";
-    for(let i = a.length-1; i >= 0; i--) {
-        result += a[i];
-    }
-    return result
-}
-console.log(solution("123"));
+// console.log(Revse("gap"));
 
 
+// // 2-usul
+// function getReverse(gap) {
+//     let result = "";
+//     for(let i = gap.length-1; i >= 0; i--) {
+//         result += gap.charAt(i)
+//     }
+//     return result
+// }
 
+// console.log(getReverse("maxdasl"));
 
-
-
+// // 3-usul
+// function solution(num_list) {
+//     let a = num_list.split('');
+//     let result = "";
+//     for(let i = a.length-1; i >= 0; i--) {
+//         result += a[i];
+//     }
+//     return result
+// }
+// console.log(solution("123"));
 
 
 /*D-TASK: 
